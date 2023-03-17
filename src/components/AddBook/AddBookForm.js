@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { useAddBookMutation } from "../../features/api/ApiSlice";
 
 const AddBookForm = () => {
+	const navigate = useNavigate();
 	//edite book query
 	const [addBook, { data: book, isLoading, isError, isSuccess }] =
 		useAddBookMutation();
@@ -25,6 +27,14 @@ const AddBookForm = () => {
 		setFormState({});
 		document.getElementById("add-book-form").reset();
 	};
+
+	// After add success will move back to home
+	useEffect(() => {
+		if (isSuccess) {
+			navigate("/");
+		}
+	}, [isSuccess, navigate]);
+
 	return (
 		<form
 			class="book-form"
