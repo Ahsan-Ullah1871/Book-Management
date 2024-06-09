@@ -5,6 +5,8 @@ This project is a book management application built using React, Redux Toolkit
 and delete books from a list stored on a server. This README will guide you
 through the setup, features, and usage of the application.
 
+![Alt text](image.png)
+
 ## Features
 
 - **Book List Display:** On page load, fetches and displays a list of books from
@@ -86,3 +88,4 @@ through the setup, features, and usage of the application.
 - Redux Toolkit (RTK) Query
 - React Router
 - CSS
+
