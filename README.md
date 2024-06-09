@@ -7,6 +7,9 @@ through the setup, features, and usage of the application.
 
 ![Alt text](image.png)
 
+**Live URL:**
+[Book Management Application](https://book-management-one.vercel.app/)
+
 ## Features
 
 - **Book List Display:** On page load, fetches and displays a list of books from
