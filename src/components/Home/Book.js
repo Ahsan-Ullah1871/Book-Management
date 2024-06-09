@@ -30,7 +30,7 @@ const Book = ({ book }) => {
 			<div class="flex-1 h-full pr-2 pt-2 flex flex-col">
 				<div class="flex items-center justify-between">
 					{featured ? (
-						<span class="lws-badge">
+						<span class="tech-lab-badge">
 							featured
 						</span>
 					) : (
@@ -38,7 +38,7 @@ const Book = ({ book }) => {
 					)}
 					<div class="text-gray-500 space-x-2">
 						<button
-							class="lws-edit "
+							class="tech-lab-edit "
 							onClick={handleEdit}
 						>
 							<svg
@@ -56,7 +56,7 @@ const Book = ({ book }) => {
 							</svg>
 						</button>
 						<button
-							class="lws-deleteBook"
+							class="tech-lab-deleteBook"
 							onClick={handleDelete}
 						>
 							<svg
@@ -77,9 +77,9 @@ const Book = ({ book }) => {
 				</div>
 
 				<div class="space-y-2 mt-4 h-full">
-					<h4 class="lws-book-name">{name}</h4>
-					<p class="lws-author">{author}</p>
-					<div class="lws-stars">
+					<h4 class="tech-lab-book-name">{name}</h4>
+					<p class="tech-lab-author">{author}</p>
+					<div class="tech-lab-stars">
 						{rating >= 1 && (
 							<svg
 								viewBox="0 0 20 20"
@@ -146,7 +146,7 @@ const Book = ({ book }) => {
 							</svg>
 						)}
 					</div>
-					<p class="lws-price">{price}</p>
+					<p class="tech-lab-price">{price}</p>
 				</div>
 			</div>
 		</div>

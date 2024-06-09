@@ -20,7 +20,7 @@ const Home = () => {
 
 				<div class="flex items-center space-x-4">
 					<button
-						class={`lws-filter-btn ${
+						class={`tech-lab-filter-btn ${
 							!featured && "active-filter"
 						}`}
 						onClick={selectType}
@@ -28,7 +28,7 @@ const Home = () => {
 						All
 					</button>
 					<button
-						class={`lws-filter-btn ${
+						class={`tech-lab-filter-btn ${
 							featured && "active-filter"
 						}`}
 						onClick={selectType}

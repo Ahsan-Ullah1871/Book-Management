@@ -1,16 +1,88 @@
-Live URL: https://assignment-8-by-ahsan.netlify.app/
+# Book Management Application
 
-এই এসাইনমেন্ট এ যা যা করতে হবেঃ
-এসাইনমেন্ট 4 এ যা যা করা হয়েছিলো, ঠিক সেগুলোই করতে হবে। তবে এখানে RTK Query ব্যবহার করে API কল করে করতে হবে।
+This project is a book management application built using React, Redux Toolkit
+(RTK) Query, and React Router. The application allows users to view, add, edit,
+and delete books from a list stored on a server. This README will guide you
+through the setup, features, and usage of the application.
 
-✓ পেজ লোড হলেই, সার্ভার থেকে বই এর লিস্ট গুলো নিয়ে এসে দেখাবে
+## Features
 
-✓ 'Add Book পেজে' বই এর তথ্য দিয়ে সাবমিট করলে সেগুলো সার্ভারে গিয়ে সেভ হবে। অবশ্যই RTK Query এর Mutation কুয়েরি ব্যবহার করে করতে হবে এবং এড হলে 'Add' পেজ থেকে Home পেজে চলে আসবে।
+- **Book List Display:** On page load, fetches and displays a list of books from
+  the server using RTK Query.
+- **Add Book:** Allows users to add a new book through a form. The book is saved
+  to the server using RTK Query Mutation and redirects to the Home page after
+  successful submission.
+- **Book Filtering:** Provides two tags, 'All' and 'Featured', to filter the
+  displayed books on the client side.
+- **Search Functionality:** Includes a search bar in the navigation menu to
+  search books by their names. Displays search results in the Book List section.
+- **Edit Book:** Allows users to edit book details. Navigates to an edit page
+  with pre-filled form data using React Router. Updates the book details on the
+  server upon submission and redirects to the Home page.
+- **Delete Book:** Deletes a book from the server when the delete button is
+  clicked.
 
-✓ 'Book List' - এর ডানে 'All', 'Featured' নামে দুটি ট্যাগ আছে, 'Featured' সিলেক্ট করলে featured বই গুলো শুধু ফিল্টার করে দেখাবে। 'All' দিলে সব গুলোই দেখাবে। এটি ক্লাইন্ট সাইডেই করতে হবে।
+## Installation
 
-✓ নেভিগেশন মেনুতে 'Search Bar' - আছে, সেখানে সার্চ করলে, শুধু মাত্র বই এর নাম দিয়ে সার্চ করবে এবং সার্চ রেজাল্ট 'Book List' সেকশনেই ফিল্টার হয়ে দেখাবে। সার্চ বার ফাঁকা থাকলে, স্বভাবিক ভাবে যেমন সব বই গুলো দেখায়, সেভাবেই দেখাবে।
+1. Clone the repository:
+      ```bash
+      git clone https://github.com/yourusername/book-management-app.git
+      ```
+2. Navigate to the project directory:
+      ```bash
+      cd book-management-app
+      ```
+3. Install the dependencies:
+      ```bash
+      npm install
+      ```
+4. Start the development server:
+      ```bash
+      npm start
+      ```
 
-✓ কার্ড আইটেমের 'Edit' আইকনে ক্লিক করলে এডিটের একটি পেজে নিয়ে যাবে। এর জন্যে React Router ব্যবহার করতে হবে এবং এডিট পেজে গেলে, সেই বইটির তথ্য দিয়ে ফর্ম টা আগে থেকেই পূরন করা থাকবে। এখন এই ফর্ম এর কোনো ডেটা আপডেট করলে সেটি সার্ভার এও আপডেট হয়ে যাবে এবং আপডেট হলে এডিট পেজ থেকে হোম পেজে চলে আসবে।
+## Usage
 
-✓ সব শেষে ডিলেট বাটনে ক্লিক করলে, বইটি সার্ভার থেকেও ডিলেট হয়ে যাবে
+### Book List Display
+
+- On page load, the application fetches the list of books from the server and
+  displays them on the home page.
+
+### Add Book
+
+1. Navigate to the 'Add Book' page.
+2. Fill out the book details in the form.
+3. Submit the form to save the book to the server.
+4. The application will redirect to the Home page after successful submission.
+
+### Book Filtering
+
+- Click on the 'All' tag to view all books.
+- Click on the 'Featured' tag to view only the featured books.
+
+### Search Functionality
+
+- Use the search bar in the navigation menu to search for books by their names.
+- The search results will be displayed in the Book List section.
+- Clearing the search bar will display all books.
+
+### Edit Book
+
+1. Click on the 'Edit' icon on a book card.
+2. The application will navigate to the edit page with the book's details
+   pre-filled in the form.
+3. Update the book details and submit the form.
+4. The application will update the book on the server and redirect to the Home
+   page.
+
+### Delete Book
+
+- Click on the 'Delete' button on a book card to delete the book from the
+  server.
+
+## Technologies Used
+
+- React
+- Redux Toolkit (RTK) Query
+- React Router
+- CSS

@@ -11,6 +11,8 @@ const Books = () => {
 		isSuccess,
 	} = useGetBooksQuery();
 
+	console.log(books);
+
 	// filter slector
 	const { search_text, featured } = useSelector(
 		(state) => state.filter_book
@@ -41,14 +43,19 @@ const Books = () => {
 
 	if (!isLoading && isError) content = <p>There have an error </p>;
 
-	if (!isLoading && !isError && books?.length == 0)
+	if (!isLoading && !isError && books?.data?.length == 0)
 		content = <p>No books available</p>;
 
-	if (!isLoading && !isError && books?.length > 0) {
-		content = books
+	if (!isLoading && !isError && books?.data?.length > 0) {
+		content = books?.data
 			.filter(selectByType)
 			.filter(searchByTitle)
-			.map((book) => <Book key={book.id} book={book} />);
+			.map((book) => (
+				<Book
+					key={book.id}
+					book={book}
+				/>
+			));
 	}
 
 	return (

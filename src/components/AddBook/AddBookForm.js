@@ -18,7 +18,7 @@ const AddBookForm = () => {
 	// Handle submit
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		addBook({ ...formState });
+		addBook({ ...formState, featured: formState?.featured ?? false });
 		resetForm();
 	};
 
@@ -42,12 +42,12 @@ const AddBookForm = () => {
 			onSubmit={handleSubmit}
 		>
 			<div class="space-y-2">
-				<label for="lws-bookName">Book Name</label>
+				<label for="tech-lab-bookName">Book Name</label>
 				<input
 					required
 					class="text-input"
 					type="text"
-					id="lws-bookName"
+					id="tech-lab-bookName"
 					name="name"
 					value={formState?.name}
 					onChange={(e) =>
@@ -57,12 +57,12 @@ const AddBookForm = () => {
 			</div>
 
 			<div class="space-y-2">
-				<label for="lws-author">Author</label>
+				<label for="tech-lab-author">Author</label>
 				<input
 					required
 					class="text-input"
 					type="text"
-					id="lws-author"
+					id="tech-lab-author"
 					name="author"
 					value={formState?.author}
 					onChange={(e) =>
@@ -75,12 +75,12 @@ const AddBookForm = () => {
 			</div>
 
 			<div class="space-y-2">
-				<label for="lws-thumbnail">Image Url</label>
+				<label for="tech-lab-thumbnail">Image Url</label>
 				<input
 					required
 					class="text-input"
 					type="text"
-					id="lws-thumbnail"
+					id="tech-lab-thumbnail"
 					name="thumbnail"
 					value={formState?.thumbnail}
 					onChange={(e) =>
@@ -94,12 +94,12 @@ const AddBookForm = () => {
 
 			<div class="grid grid-cols-2 gap-8 pb-4">
 				<div class="space-y-2">
-					<label for="lws-price">Price</label>
+					<label for="tech-lab-price">Price</label>
 					<input
 						required
 						class="text-input"
 						type="number"
-						id="lws-price"
+						id="tech-lab-price"
 						name="price"
 						value={formState?.price}
 						onChange={(e) =>
@@ -112,12 +112,12 @@ const AddBookForm = () => {
 				</div>
 
 				<div class="space-y-2">
-					<label for="lws-rating">Rating</label>
+					<label for="tech-lab-rating">Rating</label>
 					<input
 						required
 						class="text-input"
 						type="number"
-						id="lws-rating"
+						id="tech-lab-rating"
 						name="rating"
 						min="1"
 						max="5"
@@ -134,7 +134,7 @@ const AddBookForm = () => {
 
 			<div class="flex items-center">
 				<input
-					id="lws-featured"
+					id="tech-lab-featured"
 					type="checkbox"
 					name="featured"
 					class="w-4 h-4"
@@ -148,13 +148,20 @@ const AddBookForm = () => {
 						)
 					}
 				/>
-				<label for="lws-featured" class="ml-2 text-sm">
+				<label
+					for="tech-lab-featured"
+					class="ml-2 text-sm"
+				>
 					{" "}
 					This is a featured book{" "}
 				</label>
 			</div>
 
-			<button type="submit" class="submit" id="lws-submit">
+			<button
+				type="submit"
+				class="submit"
+				id="tech-lab-submit"
+			>
 				Add Book
 			</button>
 

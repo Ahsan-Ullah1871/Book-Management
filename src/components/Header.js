@@ -17,7 +17,7 @@ const Header = () => {
 		<nav class="py-4 2xl:px-6">
 			<div class="container flex items-center justify-between">
 				<img
-					src="/images/logo.svg"
+					src="/images/logo.png"
 					width="150px"
 					class="object-contain"
 				/>
@@ -26,14 +26,14 @@ const Header = () => {
 					<Link
 						class="font-semibold cursor-pointer"
 						to="/"
-						id="lws-bookStore"
+						id="tech-lab-bookStore"
 					>
 						<li>Book Store</li>
 					</Link>
 					<Link
 						class="cursor-pointer"
 						to="/addbook"
-						id="lws-addBook"
+						id="tech-lab-addBook"
 					>
 						<li>Add Book</li>
 					</Link>
@@ -57,7 +57,7 @@ const Header = () => {
 							type="text"
 							placeholder="Filter books..."
 							class="search"
-							id="lws-search"
+							id="tech-lab-search"
 							value={search_text}
 							onChange={(e) =>
 								handleSearch(
